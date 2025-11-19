@@ -1,0 +1,68 @@
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrado vertical perfecto */
+  align-items: center;
+  text-align: center;
+  min-height: 100vh; /* Ocupa toda la pantalla */
+  padding: 0 20px;
+}
+
+.welcomeTitle {
+  font-size: 5rem; /* Texto Welcome grande */
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  opacity: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.animateIn {
+  animation: slideIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards 0.5s;
+}
+
+.contentBox {
+  max-width: 800px; /* Limita el ancho para lectura cómoda */
+  animation: fadeIn 1.5s ease-out forwards 1s; /* Aparece después del título */
+  opacity: 0;
+}
+
+.bioText {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.ctaButton {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.ctaButton:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translateY(-3px);
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .welcomeTitle { font-size: 3rem; }
+  .bioText { font-size: 1.1rem; }
+}

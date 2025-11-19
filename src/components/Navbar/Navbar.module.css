@@ -1,0 +1,46 @@
+/* src/components/Navbar/Navbar.module.css */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--header-bg); 
+  backdrop-filter: blur(10px); 
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.links a {
+  margin-left: 30px;
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.links a:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none; 
+  }
+}

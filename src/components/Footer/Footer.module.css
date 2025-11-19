@@ -1,0 +1,15 @@
+/* src/components/Footer/Footer.module.css */
+
+.footer {
+  text-align: center;
+  padding: 40px 5%;
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--border-color);
+  font-size: 0.9rem;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.footer p {
+  margin-bottom: 5px;
+}

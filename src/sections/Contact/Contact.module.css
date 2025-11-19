@@ -1,0 +1,118 @@
+
+.contactWrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 20px;
+}
+
+/* Texto Izquierda */
+.textSection {
+  flex: 1;
+  color: var(--text-color);
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.prompt {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* Grid Derecha (Puzzle) */
+.puzzleGrid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: repeat(2, 150px); 
+  gap: 15px;
+  width: 100%;
+}
+
+.puzzleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  color: var(--puzzle-text); 
+  
+  text-align: center; 
+  padding: 10px;
+}
+
+.puzzleBox:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.emailText {
+  font-size: 0.85rem;
+  font-weight: normal;
+  margin-top: 5px;
+  opacity: 0.95;
+  word-break: break-all;
+}
+
+/* --- ASIGNACIÓN DE COLORES DINÁMICOS --- */
+
+.boxLinkedin {
+  /* Esta variable será Azul en modo claro y Verde oscuro en modo oscuro */
+  background-color: var(--puzzle-1); 
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; 
+}
+
+.boxEmail {
+  /* Azul medio vs Verde medio */
+  background-color: var(--puzzle-2); 
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.boxGithub {
+  /* Azul claro vs Verde claro */
+  background-color: var(--puzzle-3); 
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+/* Responsividad */
+@media (max-width: 800px) {
+  .contactWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .puzzleGrid {
+    margin-top: 30px;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+  }
+
+  .boxLinkedin, .boxEmail, .boxGithub {
+    grid-column: auto;
+    grid-row: auto;
+    height: 120px;
+  }
+}

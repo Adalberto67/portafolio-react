@@ -1,0 +1,70 @@
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px; /* Reducido para acercar el subtítulo */
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+.subHeading {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.9;
+}
+
+.contentWrapper {
+  display: flex;
+  gap: 60px;
+}
+
+.infoSection { flex: 1; }
+.skillsSection { flex: 1; }
+
+.sectionTitle {
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+.skillsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skillTag {
+  background-color: rgba(150, 150, 150, 0.1); /* Fondo sutil */
+  color: var(--text-color);
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.skillTag:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .contentWrapper { flex-direction: column; gap: 40px; }
+}

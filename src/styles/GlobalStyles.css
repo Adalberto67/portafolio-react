@@ -1,0 +1,60 @@
+
+/* --- TEMA CLARO (Light Mode) --- */
+:root {
+  --primary-color: #0070f3; 
+  --text-color: #1a1a1a;    
+
+  --bg-color: #f3f4f6;      
+  
+  --card-bg: #ffffff;       
+  --border-color: #d1d5db;  
+  --header-bg: rgba(243, 244, 246, 0.9); 
+
+  /* Colores del Puzzle para Modo Claro (Tonos Azules) */
+  --puzzle-1: #005582; /* Azul Oscuro (LinkedIn) */
+  --puzzle-2: #0284c7; /* Azul Medio (Email) */
+  --puzzle-3: #38bdf8; /* Azul Claro (GitHub) */
+  --puzzle-text: #ffffff; /* Texto blanco */
+}
+
+/* --- TEMA OSCURO (Dark Mode) --- */
+.dark-mode {
+  --primary-color: #4CAF50; 
+  --text-color: #f0f0f0;    
+  --bg-color: #181818;      /* Fondo oscuro original */
+  --card-bg: #222222;       
+  --border-color: #333333;  
+  --header-bg: rgba(24, 24, 24, 0.9); 
+
+  /* CAMBIO: Colores del Puzzle para Modo Oscuro (Tonos Verdes) */
+  --puzzle-1: #2e7d32; /* Verde Bosque */
+  --puzzle-2: #43a047; /* Verde Medio */
+  --puzzle-3: #66bb6a; /* Verde Claro */
+  --puzzle-text: #ffffff;
+}
+
+/* Estilos de Reinicio */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de Cuerpo */
+body {
+  font-family: 'Arial', sans-serif; 
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  scroll-behavior: smooth; 
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+section {
+  padding: 100px 5% 50px;
+  min-height: 100vh;
+}
